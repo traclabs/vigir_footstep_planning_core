@@ -33,9 +33,9 @@ plugin_set: default
 planner_type: ARAPlanner
 
 # search until a specific time limit is reached or first solution is found
-search_until_first_solution: False
+search_until_first_solution: True
 
-max_planning_time: 10.0 # default max planning time if not given by request
+max_planning_time: 20.0 # default max planning time if not given by request
 initial_epsilon: 8.0
 decrease_epsilon: 0.2
 
@@ -46,11 +46,11 @@ forward_search: True
 foot_contact_support:
   min_sampling_steps_x: 6
   min_sampling_steps_y: 4
-  max_sampling_steps_x: 32
-  max_sampling_steps_y: 24
-  max_intrusion_z: 0.01
-  max_ground_clearance: 0.02
-  minimal_support: 0.85
+  max_sampling_steps_x: 64 #32
+  max_sampling_steps_y: 64 #24
+  max_intrusion_z: 0.02 # 0.01
+  max_ground_clearance: 0.02 #0.03
+  minimal_support: 0.1 #0.5
 
 collision_check:
   # collision check mask (binary encoded)
